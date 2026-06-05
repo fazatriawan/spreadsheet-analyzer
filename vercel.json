@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/analyze.py": { "maxDuration": 300 },
+    "api/load_sheets.py": { "maxDuration": 300 },
+    "api/compare.py": { "maxDuration": 300 },
+    "api/chat.py": { "maxDuration": 60 },
+    "api/explain.py": { "maxDuration": 30 }
+  },
+  "rewrites": [
+    { "source": "/api/sheets/load", "destination": "/api/load_sheets" },
+    { "source": "/api/cache/clear", "destination": "/api/cache_clear" }
+  ]
+}
