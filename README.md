@@ -10,7 +10,30 @@ Analisis formula, dependency graph, dan perbaikan otomatis untuk Google Sheets.
 | **Lokal (Dash)** | `python web_app.py` | Spreadsheet sangat besar, tanpa timeout |
 | **CLI** | `python main.py analyze --url "..."` | Otomatisasi & batch |
 
-## Deploy ke Vercel
+## Deploy
+
+### Otomatis (disarankan)
+
+Setiap `git push` ke GitHub → Vercel deploy otomatis.
+
+```bash
+git add .
+git commit -m "update fitur"
+git push origin master
+```
+
+Repo: [github.com/fazatriawan/spreadsheet-analyzer](https://github.com/fazatriawan/spreadsheet-analyzer)  
+Production: [spreadsheet-analyzer-gray.vercel.app](https://spreadsheet-analyzer-gray.vercel.app)
+
+### Manual
+
+```powershell
+npx vercel deploy --prod --yes
+# atau
+.\scripts\deploy.ps1
+```
+
+### Deploy ke Vercel (setup awal)
 
 ### 1. Push ke GitHub
 
